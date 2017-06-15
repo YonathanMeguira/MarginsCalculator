@@ -1,0 +1,32 @@
+<div layout="column" layout-align="center center" style="height: 100vh">
+  <md-card id="main-card" class="animated bounceIn">
+    <div layout="row" layout-align="center center">
+      <p md-card-title style="color: #4086D2">Margins Calculator</p>
+    </div>
+    <div md-card-content layout="column" layout-align="center center" layout-margin>
+      <md-input-container class="example-full-width mb-3">
+        <input mdInput placeholder="Revenues" [(ngModel)]="margin.revenues" type="number"
+               (keyup)="calculateMargin(margin)" (keypress)="calculateMargin(margin)">
+      </md-input-container>
+      <md-input-container class="example-full-width mb-3">
+        <input mdInput placeholder="Cost" [(ngModel)]="margin.cost" type="number" (keyup)="calculateMargin(margin)"
+               (keypress)="calculateMargin(margin)">
+      </md-input-container>
+      <md-input-container class="example-full-width mb-3">
+        <input mdInput placeholder="Markup (%)" [(ngModel)]="margin.markup" type="number">
+      </md-input-container>
+      <md-input-container class="example-full-width mb-3">
+        <input mdInput placeholder="Gross Margin (%)" [(ngModel)]="margin.grossMargin" type="number">
+      </md-input-container>
+
+      <md-input-container class="example-full-width mb-3">
+        <input mdInput placeholder="Profit" [(ngModel)]="margin.profit" type="number">
+      </md-input-container>
+    </div>
+    <div md-card-footer layout="row" layout-margin layout-align="space-between center">
+      <button md-button id="reset" (click)="reset()">RESET</button>
+      <p style="color: #666">Margins Calculator By <span style="color: #4086D2; font-weight: 700"><a
+        href="https://www.vatreo.com/" target="_blank">Vatreo</a></span></p>
+    </div>
+  </md-card>
+</div>

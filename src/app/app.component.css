@@ -1,0 +1,14 @@
+#main-card{
+
+  padding: 1em;
+  width: 45%;
+}
+.example-full-width {
+  width: 100%;
+}
+#reset{
+  width: 20%; background-color: #00E676; color: white
+}
+#reset:hover{
+  background-color: #4086D2;
+}
